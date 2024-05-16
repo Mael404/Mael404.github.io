@@ -1899,12 +1899,9 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
 
-}
+--------------------------------------------------------------*/
+
 
 .header {
   display: flex;
@@ -2882,4 +2879,75 @@ section,
   padding: 0;
 }
 
-/*--------------------------------------------------------------
+/*--------------------------------------------------------------*/
+
+
+@media (min-width: 992px) {
+  .medium-image {
+    display: block;
+    max-width: 70%; /* Adjust as needed for 'medium' size */
+    height: auto;
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Ensure slides take up full height */
+  }
+
+  .position-relative {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.interaction-panel {
+  margin-top: 10px;
+}
+
+.comment-box {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.comment-box::placeholder {
+  color: #888;
+}
+
+.like-button,
+.dislike-button {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+.like-button:hover,
+.dislike-button:hover {
+  color: #0056b3;
+}
+
+.fa-heart {
+  margin-right: 5px;
+}
+
+.like-button {
+  color: #007bff;
+}
+
+.dislike-button {
+  color: #e11b1b;
+}
+
+.like-button + .dislike-button {
+  margin-left: 10px; /* Adjust spacing between the buttons */
+}
