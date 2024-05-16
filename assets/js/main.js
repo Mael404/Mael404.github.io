@@ -216,23 +216,3 @@ window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  const likeButton = document.querySelector('.like-button');
-  const dislikeButton = document.querySelector('.dislike-button');
-  const commentBox = document.querySelector('.comment-box');
-
-  // Add event listeners
-  likeButton.addEventListener('click', redirectToLogin);
-  dislikeButton.addEventListener('click', redirectToLogin);
-  commentBox.addEventListener('focus', redirectToLogin);
-
-  function redirectToLogin() {
-    // Check if user is logged in (You should replace this condition with your actual check)
-    const isLoggedIn = false; // Replace this with your actual check
-
-    if (!isLoggedIn) {
-      // Redirect user to login page
-      window.location.href = ''; // Replace 'login.html' with your login page URL
-    }
-  }
-});
