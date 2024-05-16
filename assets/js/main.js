@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (!isLoggedIn) {
       // Redirect user to login page
-      window.location.href = 'login/login.php'; // Replace 'login.html' with your login page URL
+      window.location.href = ''; // Replace 'login.html' with your login page URL
     }
   }
 });
