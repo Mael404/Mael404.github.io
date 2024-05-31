@@ -1,18 +1,7 @@
-/**
-* Template Name: Mentor
-* Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-* Updated: May 04 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-
 (function() {
   "use strict";
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
+
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
@@ -23,9 +12,7 @@
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 
-  /**
-   * Mobile nav toggle
-   */
+  
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
   function mobileNavToogle() {
@@ -35,9 +22,7 @@
   }
   mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
+ 
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
@@ -47,9 +32,7 @@
 
   });
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
+  
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
     navmenu.addEventListener('click', function(e) {
       if (document.querySelector('.mobile-nav-active')) {
@@ -61,9 +44,7 @@
     });
   });
 
-  /**
-   * Preloader
-   */
+ 
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
@@ -71,9 +52,7 @@
     });
   }
 
-  /**
-   * Scroll top button
-   */
+  
   let scrollTop = document.querySelector('.scroll-top');
 
   function toggleScrollTop() {
@@ -93,7 +72,7 @@
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
-   * Animation on scroll function and init
+   * sa pag scroll animation. depende sa duration ang pag show
    */
   function aosInit() {
     AOS.init({
@@ -106,20 +85,18 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Initiate glightbox
+   * pag initiatio gbox
    */
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
 
   /**
-   * Initiate Pure Counter
+   * calling the method
    */
   new PureCounter();
 
-  /**
-   * Init swiper sliders
-   */
+ 
   function initSwiper() {
     document.querySelectorAll('.swiper').forEach(function(swiper) {
       let config = JSON.parse(swiper.querySelector('.swiper-config').innerHTML.trim());
@@ -132,15 +109,12 @@
 
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
   const searchIcon = document.querySelector(".search-icon");
   const searchBar = document.getElementById("search-bar");
 
   searchIcon.addEventListener("click", function() {
-      searchBar.classList.toggle("fade-in"); // Toggle the fade-in class
+      searchBar.classList.toggle("fade-in"); 
   });
 });
 
@@ -153,18 +127,18 @@ const initSlider = () => {
   const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
   const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
   
-  // Handle scrollbar thumb drag
+
   scrollbarThumb.addEventListener("mousedown", (e) => {
       const startX = e.clientX;
       const thumbPosition = scrollbarThumb.offsetLeft;
       const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
       
-      // Update thumb position on mouse move
+   
       const handleMouseMove = (e) => {
           const deltaX = e.clientX - startX;
           const newThumbPosition = thumbPosition + deltaX;
 
-          // Ensure the scrollbar thumb stays within bounds
+     
           const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
           const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
           
@@ -172,13 +146,13 @@ const initSlider = () => {
           imageList.scrollLeft = scrollPosition;
       }
 
-      // Remove event listeners on mouse up
+   
       const handleMouseUp = () => {
           document.removeEventListener("mousemove", handleMouseMove);
           document.removeEventListener("mouseup", handleMouseUp);
       }
 
-      // Add event listeners for drag interaction
+
       document.addEventListener("mousemove", handleMouseMove);
       document.addEventListener("mouseup", handleMouseUp);
   });
@@ -192,7 +166,7 @@ const initSlider = () => {
       });
   });
 
-//may bug dto
+
   const handleSlideButtons = () => {
       slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
       slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
