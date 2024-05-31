@@ -13,7 +13,7 @@
   --default-color-rgb: 68, 68, 68;
   --heading-color: #000000;
   --heading-color-rgb: 55, 66, 59;
-  --accent-color: #F1C40F;
+  --accent-color: #1D24CA;
   --accent-color-rgb: 95, 207, 128;
   --contrast-color: #ffffff;
   --contrast-color-rgb: 255, 255, 255;
@@ -22,7 +22,7 @@
 /* Nav Menu Colors */
 :root {
   --nav-color: #000000;
-  --nav-hover-color: #F1C40F;
+  --nav-hover-color: #1D24CA;
   --nav-dropdown-color: #272828;
   --nav-dropdown-hover-color: #000000;
   --nav-dropdown-background-color: #ffffff;
@@ -184,7 +184,7 @@ h6 {
 
   .navmenu li:hover>a,
   .navmenu li a.active:hover {
-    color: var(--nav-hover-color); /* Ensure hover color works even if the link is active */
+    color: var(--nav-hover-color);
   }
 
   .navmenu .dropdown ul {
@@ -780,7 +780,7 @@ section,
   --background-color-rgb: 0, 0, 0;
   --heading-color: #ffffff;
   width: 100%;
-  min-height: 80vh;
+  min-height: 90vh;
   position: relative;
   padding: 80px 0;
   display: flex;
@@ -817,6 +817,7 @@ section,
   margin: 0;
   font-size: 68px;
   font-weight: 700;
+  text-shadow: 15px 3px 16px rgb(7, 11, 136);
   
 }
 
@@ -1069,7 +1070,7 @@ section,
 --------------------------------------------------------------*/
 .courses .course-item {
   border-radius: 5px;
-  border: 1px solid rgba(var(--default-color-rgb), 0.1);
+
 }
 
 .courses .course-content {
@@ -1948,7 +1949,7 @@ section,
 }
 
 .custom-card-title {
-  background-color: #F1C40F;
+  background-color: #1D24CA;
   padding: 10px; /* Customize padding */
   font-size: 20px; /* Customize font size */
   font-weight: bold; /* Optionally customize font weight */
@@ -2066,7 +2067,7 @@ section,
 }
 
 .form-control {
-  border: 1px solid #F1C40F;
+  border: 1px solid #1D24CA;
   border-radius: 2px;
   padding: 8px;
   margin-bottom: 15px;
@@ -2244,7 +2245,7 @@ section,
 }
 
 .custom-btn {
-  background-color: #F1C40F;
+  background-color: #1D24CA;
   border-color: #dadada;
   color: #fff;
   font-size: 16px;
